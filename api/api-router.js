@@ -7,6 +7,8 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', (req, res) => {
+  const enviroment = process.env
+  const PORT = process.env.PORT || 5000
   res.status(200).json({ api: 'up' });
 });
 
